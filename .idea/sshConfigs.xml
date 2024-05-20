@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" host="evernote.s2110456007.student.kwmhgb.at" id="2badc5cf-4986-45ca-adea-e66aaa9b060b" port="222" nameFormat="DESCRIPTIVE" username="sstud727" useOpenSSHConfig="true" />
+    </configs>
+  </component>
+</project>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="ce6b9861-ddfa-4613-aee2-60c226976ec7" name="HETZNER" url="http://evernote.s2110456007.student.kwmhgb.at/">
+        <fileTransfer rootFolder="/usr/home/sstud727/public_html/evernote" accessType="SFTP" host="evernote.s2110456007.student.kwmhgb.at" port="222" sshConfigId="2badc5cf-4986-45ca-adea-e66aaa9b060b" sshConfig="sstud727@evernote.s2110456007.student.kwmhgb.at:222 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

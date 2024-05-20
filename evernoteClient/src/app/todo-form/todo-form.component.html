@@ -1,0 +1,42 @@
+<h1>Todo Formular</h1>
+<form class="ui large form" [formGroup]="todoForm" (ngSubmit)="submitForm()">
+  <div class="field">
+    <label for="title">Titel des Todos:</label>
+    <input type="text" id="title" formControlName="title">
+  </div>
+
+  <div class="field">
+    <label for="description">Beschreibung des Todos:</label>
+    <input type="text" id="description" formControlName="description">
+  </div>
+
+  <div class="field">
+    <label for="due_date">Fälligkeitsdatum des Todos:</label>
+    <input type="date" id="due_date" formControlName="due_date" placeholder="Deadline"/>
+  </div>
+
+  <div formArrayName="tags">
+    <label>Tags:</label>
+    @for(tagControl of tags.controls; track tagControl; let i = $index){
+      <div>
+          <div [formGroupName]="i" class="field">
+          <span>{{ tagControl.value.name }}</span>
+          </div>
+      </div>
+    }
+
+    <div class="field">
+      <select #selectedTag (change)="addTagControl(selectedTag.value)">
+        <option default>Wähle eine Tag</option>
+        @for(tag of availableTags; track tag){
+          <option [value]="tag.id">
+            {{ tag.name }}
+          </option>
+        }
+      </select>
+    </div>
+  </div>
+
+  <br>
+  <button type="submit" class="ui button blue" [disabled]="todoForm.invalid">Speichern</button>
+</form>

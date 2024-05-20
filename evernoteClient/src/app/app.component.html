@@ -1,0 +1,61 @@
+<div class="ui two item tabs menu">
+    <a routerLink="lists" routerLinkActive="active" class="item">Listen</a>
+    <a routerLink="login" routerLinkActive="active" class="item">{{ getLoginLabel() }}</a>
+</div>
+
+<div class="ui container">
+    <router-outlet></router-outlet>
+</div>
+
+<!-- Neuer Footer -->
+<footer class="ui vertical footer segment">
+  <div class="ui container">
+    <div class="ui stackable divided grid">
+      <!-- Über Uns -->
+      <div class="four wide column">
+        <h4 class="ui header">Über Uns</h4>
+        <p>Wir sind ein innovatives Unternehmen, das sich darauf spezialisiert hat, erstklassige Dienstleistungen und Produkte anzubieten. Unser Ziel ist es, die Erwartungen unserer Kunden stets zu übertreffen.</p>
+      </div>
+      <!-- Kontaktinformationen -->
+      <div class="four wide column">
+        <h4 class="ui header">Kontakt</h4>
+        <div class="ui link list">
+          <a href="mailto:info@unternehmen.de" class="item">info&#64;unternehmen.de</a>
+          <a href="tel:+491234567890" class="item">+49 123 456 7890</a>
+          <div class="item">123 Firmenstraße<br>12345 Musterstadt</div>
+        </div>
+      </div>
+      <!-- Nützliche Links -->
+      <div class="four wide column">
+        <h4 class="ui header">Nützliche Links</h4>
+        <div class="ui link list">
+          <a href="#" class="item">Häufig gestellte Fragen</a>
+          <a href="#" class="item">Support</a>
+          <a href="#" class="item">Karriere</a>
+          <a href="#" class="item">Blog</a>
+        </div>
+      </div>
+      <!-- Soziale Medien -->
+      <div class="four wide column">
+        <h4 class="ui header">Folge Uns</h4>
+        <div class="ui link list">
+          <a href="#" class="item"><i class="facebook icon"></i> Facebook</a>
+          <a href="#" class="item"><i class="twitter icon"></i> Twitter</a>
+          <a href="#" class="item"><i class="instagram icon"></i> Instagram</a>
+          <a href="#" class="item"><i class="linkedin icon"></i> LinkedIn</a>
+        </div>
+      </div>
+    </div>
+    <div class="ui section divider"></div>
+    <div class="ui center aligned container">
+      <img class="ui centered mini image" src="path/to/logo.png" alt="Firmenlogo">
+      <div class="ui horizontal small divided link list">
+        <a class="item" href="#">Impressum</a>
+        <a class="item" href="#">Datenschutz</a>
+        <a class="item" href="#">AGB</a>
+        <a class="item" href="#">Cookie-Einstellungen</a>
+      </div>
+      <p>&copy; 2024 Unternehmen. Alle Rechte vorbehalten.</p>
+    </div>
+  </div>
+</footer>

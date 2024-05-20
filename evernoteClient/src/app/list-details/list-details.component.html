@@ -1,0 +1,41 @@
+@if(list){
+    <div class="ui grid container">
+        <div class="sixteen wide column">
+            <h1 class="ui header">{{ list.name }}</h1>
+            <div class="ui divider"></div>
+            <div class="ui stackable two column grid">
+                <div class="column">
+                  <h4 class="ui header">Erstellt von: </h4>
+                  <p><i class="user icon"></i> {{ list.creator.first_name }} {{ list.creator.last_name }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="sixteen wide column">
+            <h3 class="ui header">Notizen</h3>
+            @if(authService.isLoggedIn()) {
+                <a [routerLink]="['/edit/notes']" class="ui blue button">
+                    <i class="plus icon"></i> Notiz erstellen
+                </a>
+            }
+            <div class="ui divider"></div>
+          <br>
+            <div class="ui cards">
+                @for (note of list.notes; track note){
+                    <en-note-details [note]="note" [list]="list"></en-note-details>
+                }
+            </div>
+        </div>
+        <div class="sixteen wide column">
+          <br>
+            <button [routerLink]="['/lists']" class="ui button">Zurück zur Übersicht</button>
+            @if(authService.isLoggedIn() ) {
+                <button class="ui red button" (click)="removeList()">Liste löschen</button>
+                <a [routerLink]="['/edit/lists', list.id]" class="ui yellow button">
+                    <i class="edit icon"></i> Liste bearbeiten
+                </a>
+            }
+        </div>
+    </div>
+  <br>
+  <br>
+}

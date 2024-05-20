@@ -1,0 +1,9 @@
+<h1>Listen Formular</h1>
+<form class="ui large form" [formGroup]="listForm" (ngSubmit)="submitForm()">
+  <div class="field">
+    <label for="name">Name der Liste:</label>
+    <input type="text" id="name" formControlName="name">
+  </div>
+
+  <button type="submit" class="ui button" [disabled]="listForm.invalid">Speichern</button>
+</form>
